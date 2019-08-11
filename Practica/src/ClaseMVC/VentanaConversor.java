@@ -16,7 +16,7 @@ public class VentanaConversor extends JFrame implements InterfazVista{
 		JPanel panelPrincipal = new JPanel();
 		panelPrincipal.setLayout(new BorderLayout(10,10));
 		
-		cantidad = new JTextField(8);
+		cantidad = new JTextField(8); //numero especifico de columnas
 		JPanel panelaux = new JPanel();
 		panelaux.add(cantidad);
 		panelPrincipal.add(panelaux, BorderLayout.NORTH);
@@ -31,7 +31,8 @@ public class VentanaConversor extends JFrame implements InterfazVista{
 		convertirAeuros = new JButton("A euros");
 		convertirAeuros.setActionCommand(AEUROS);
 		JPanel botonera = new JPanel();
-		botonera.add(convertirApesos); botonera.add(convertirAeuros);
+		botonera.add(convertirApesos); 
+		botonera.add(convertirAeuros);
 		panelPrincipal.add(botonera, BorderLayout.SOUTH);
 		getContentPane().add(panelPrincipal);
 
@@ -44,6 +45,7 @@ public class VentanaConversor extends JFrame implements InterfazVista{
 	}
 
 	public void arranca() {
+	//Causes this Window to be sized to fit the preferred size and layouts of its subcomponents
 		pack();// coloca los componentes
 		setLocationRelativeTo(null);// centra la ventana en la pantalla
 		setVisible(true);// visualiza la ventana

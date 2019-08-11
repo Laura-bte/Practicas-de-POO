@@ -15,10 +15,16 @@ public class ControlConversor implements ActionListener{
 	public void actionPerformed(ActionEvent evento) {
 		double cantidad = vista.getCantidad();
 		if ( evento.getActionCommand().equals(InterfazVista.AEUROS) ){
-			vista.escribeCambio( cantidad + " pesos son:" + modelo.pesosAeuros(cantidad) + " euros" );
+			vista.escribeCambio( cantidad + " pesos son:" + modelo.pesosAeuros(cantidad) + " euros." );
 		}
 		else if ( evento.getActionCommand().equals(InterfazVista.APESOS)) {
-			vista.escribeCambio( cantidad + " euros son:" + modelo.eurosApesos(cantidad) + " pesos" );
+			vista.escribeCambio( cantidad + " euros son:" + modelo.eurosApesos(cantidad) + " pesos." );
+		}
+		else if ( evento.getActionCommand().equals(InterfazVista.DAPESOS)) {
+			vista.escribeCambio( cantidad + " dolares son:" + modelo.eurosApesos(cantidad) + " pesos." );
+		}
+		else if ( evento.getActionCommand().equals(InterfazVista.ADOLAR)) {
+			vista.escribeCambio( cantidad + " pesos son:" + modelo.eurosApesos(cantidad) + " dolares." );
 		}
 		else
 			vista.escribeCambio( "ERROR" );
